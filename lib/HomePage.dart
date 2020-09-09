@@ -27,11 +27,11 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SvgPicture.asset(logoInstagram,
-                            width: 40.0, color: whiteColor),
+                            width: 30.0, color: whiteColor),
                         Padding(
-                          padding: const EdgeInsets.only(top: 10.0),
+                          padding: const EdgeInsets.only(top: 10.0, left: 10.0),
                           child: SvgPicture.asset(logoInstagramtext,
-                              width: 160.0, color: whiteColor),
+                              width: 100.0, color: whiteColor),
                         ),
                       ],
                     ),
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                             child: RichText(
                               text: TextSpan(
                                   text: "Siti Fatimah",
-                                  style: h3.copyWith(
+                                  style: h4.copyWith(
                                     color: whiteColor,
                                     fontWeight: FontWeight.w700,
                                   ),
@@ -151,8 +151,9 @@ class _HomePageState extends State<HomePage> {
                                     TextSpan(
                                         text:
                                             " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-                                        style: h4.copyWith(
+                                        style: lableFont.copyWith(
                                           color: whiteColor,
+                                          height: 1.5,
                                         )),
                                   ]),
                             ),
