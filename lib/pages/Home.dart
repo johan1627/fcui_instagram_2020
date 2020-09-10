@@ -43,9 +43,45 @@ class HomePage extends StatelessWidget {
                     color: blackColor,
                     child: Column(
                       children: [
+                        SizedBox(height: 6.0),
+                        // Story
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              photoStory(
+                                  photo: "assets/images/profile_01.jpg",
+                                  name: "Your Story"),
+                              photoStory(
+                                  photo: "assets/images/profile_02.jpg",
+                                  name: "Latifah"),
+                              photoStory(
+                                  photo: "assets/images/profile_03.jpg",
+                                  name: "Muhammad"),
+                              photoStory(
+                                  photo: "assets/images/profile_04.jpg",
+                                  name: "Safeeya"),
+                              photoStory(
+                                  photo: "assets/images/profile_05.jpg",
+                                  name: "Hawa"),
+                              photoStory(
+                                  photo: "assets/images/profile_06.jpg",
+                                  name: "Yakob"),
+                              photoStory(
+                                  photo: "assets/images/profile_07.jpg",
+                                  name: "Aisyah"),
+                              photoStory(
+                                  photo: "assets/images/profile_08.jpg",
+                                  name: "Cahaya"),
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(height: 6.0),
                         // Feed Profile
                         ListTile(
                           leading: UnicornOutlineButton(
+                            min: 50,
                             strokeWidth: 2,
                             radius: 24,
                             gradient: LinearGradient(
@@ -58,7 +94,7 @@ class HomePage extends StatelessWidget {
                             child: Container(
                               height: 40.0,
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(40.0),
+                                borderRadius: BorderRadius.circular(50.0),
                                 child: Image.asset(
                                     "assets/images/profile_01.jpg",
                                     fit: BoxFit.cover),
@@ -172,6 +208,33 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Column photoStory({String photo, String name}) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 6.0),
+          child: UnicornOutlineButton(
+            min: 64,
+            strokeWidth: 2,
+            radius: 30,
+            gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                colors: [Colors.yellowAccent, Colors.redAccent]),
+            onPressed: () {},
+            child: Container(
+              height: 55.0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(60.0),
+                child: Image.asset(photo, fit: BoxFit.cover),
+              ),
+            ),
+          ),
+        ),
+        Text(name, style: lableFont.copyWith(color: whiteColor))
+      ],
     );
   }
 }

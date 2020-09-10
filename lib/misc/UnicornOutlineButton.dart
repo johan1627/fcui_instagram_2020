@@ -5,18 +5,25 @@ class UnicornOutlineButton extends StatelessWidget {
   final Widget _child;
   final VoidCallback _callback;
   final double _radius;
+  final double _min;
 
   UnicornOutlineButton({
     @required double strokeWidth,
     @required double radius,
+    @required double min,
     @required Gradient gradient,
     @required Widget child,
     @required VoidCallback onPressed,
   })  : this._painter = _GradientPainter(
-            strokeWidth: strokeWidth, radius: radius, gradient: gradient),
+          strokeWidth: strokeWidth,
+          radius: radius,
+          gradient: gradient,
+          min: min,
+        ),
         this._child = child,
         this._callback = onPressed,
-        this._radius = radius;
+        this._radius = radius,
+        this._min = min;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +36,7 @@ class UnicornOutlineButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(_radius),
           onTap: _callback,
           child: Container(
-            constraints: BoxConstraints(minWidth: 50, minHeight: 50),
+            constraints: BoxConstraints(minWidth: _min, minHeight: _min),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -47,15 +54,18 @@ class UnicornOutlineButton extends StatelessWidget {
 class _GradientPainter extends CustomPainter {
   final Paint _paint = Paint();
   final double radius;
+  final double min;
   final double strokeWidth;
   final Gradient gradient;
 
   _GradientPainter(
       {@required double strokeWidth,
       @required double radius,
+      @required double min,
       @required Gradient gradient})
       : this.strokeWidth = strokeWidth,
         this.radius = radius,
+        this.min = min,
         this.gradient = gradient;
 
   @override
