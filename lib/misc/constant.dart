@@ -52,5 +52,18 @@ String logoInstagramtext = "assets/icons/icon_instagramtext.svg";
 String iconTelegram = "assets/icons/icon_telegram.svg";
 
 String iconHeart = "assets/icons/icon_heart.svg";
+String iconHeartD = "assets/icons/icon_heart_dark.svg";
+
 String iconComment = "assets/icons/icon_comment.svg";
 String iconBookmark = "assets/icons/icon_bookmark.svg";
+
+String iconHomeD = "assets/icons/icon_home_dark.svg";
+String iconHome = "assets/icons/icon_home.svg";
+
+String iconSearch = "assets/icons/icon_search.svg";
+
+String iconPlusD = "assets/icons/icon_plus_dark.svg";
+String iconPlus = "assets/icons/icon_plus.svg";
+
+String iconAccountD = "assets/icons/icon_account_dark.svg";
+String iconAccount = "assets/icons/icon_account.svg";

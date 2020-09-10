@@ -1,4 +1,4 @@
-import 'package:fcui_instagram_2020/HomePage.dart';
+import 'package:fcui_instagram_2020/pages/HomeMain.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: HomeMain(),
     );
   }
 }
